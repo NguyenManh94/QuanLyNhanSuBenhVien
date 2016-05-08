@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsBangChamCong" targetNamespace="http://tempuri.org/DsBangChamCong.xsd" xmlns:mstns="http://tempuri.org/DsBangChamCong.xsd" xmlns="http://tempuri.org/DsBangChamCong.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLBenhVienConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLBenhVienConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QlNhanSuBenhVien.Properties.Settings.GlobalReference.Default.QLBenhVienConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ChamCongPrintTableAdapter" GeneratorDataComponentClassName="ChamCongPrintTableAdapter" Name="ChamCongPrint" UserDataComponentName="ChamCongPrintTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLBenhVienConnectionString (Settings)" DbObjectName="QLBenhVien.dbo.ChamCongPrint" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MaNV, HoTen, SoCong, TenKhoa FROM dbo.ChamCongPrint</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaNV" DataSetColumn="MaNV" />
+              <Mapping SourceColumn="HoTen" DataSetColumn="HoTen" />
+              <Mapping SourceColumn="SoCong" DataSetColumn="SoCong" />
+              <Mapping SourceColumn="TenKhoa" DataSetColumn="TenKhoa" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsBangChamCong" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsBangChamCong" msprop:Generator_UserDSName="DsBangChamCong">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ChamCongPrint" msprop:Generator_TableClassName="ChamCongPrintDataTable" msprop:Generator_TableVarName="tableChamCongPrint" msprop:Generator_TablePropName="ChamCongPrint" msprop:Generator_RowDeletingName="ChamCongPrintRowDeleting" msprop:Generator_RowChangingName="ChamCongPrintRowChanging" msprop:Generator_RowEvHandlerName="ChamCongPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="ChamCongPrintRowDeleted" msprop:Generator_UserTableName="ChamCongPrint" msprop:Generator_RowChangedName="ChamCongPrintRowChanged" msprop:Generator_RowEvArgName="ChamCongPrintRowChangeEvent" msprop:Generator_RowClassName="ChamCongPrintRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaNV" msprop:Generator_ColumnVarNameInTable="columnMaNV" msprop:Generator_ColumnPropNameInRow="MaNV" msprop:Generator_ColumnPropNameInTable="MaNVColumn" msprop:Generator_UserColumnName="MaNV" type="xs:int" />
+              <xs:element name="HoTen" msprop:Generator_ColumnVarNameInTable="columnHoTen" msprop:Generator_ColumnPropNameInRow="HoTen" msprop:Generator_ColumnPropNameInTable="HoTenColumn" msprop:Generator_UserColumnName="HoTen">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SoCong" msprop:Generator_ColumnVarNameInTable="columnSoCong" msprop:Generator_ColumnPropNameInRow="SoCong" msprop:Generator_ColumnPropNameInTable="SoCongColumn" msprop:Generator_UserColumnName="SoCong" type="xs:int" />
+              <xs:element name="TenKhoa" msprop:Generator_ColumnVarNameInTable="columnTenKhoa" msprop:Generator_ColumnPropNameInRow="TenKhoa" msprop:Generator_ColumnPropNameInTable="TenKhoaColumn" msprop:Generator_UserColumnName="TenKhoa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ChamCongPrint" />
+      <xs:field xpath="mstns:MaNV" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
